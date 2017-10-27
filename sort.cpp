@@ -6,15 +6,15 @@ using namespace std;
 
 bool str(float *st,int n)
 {
-	bool k=true;
+	bool h=true;
 	string t;
 	getline(cin,t);
 	istringstream stream(t);
 	for(int i = 0; i<n; i++)
 	{
-		if(!(stream>>st[i]))
-		{k = false;
-		return false;}
+	   if(!(stream>>st[i]))
+	      {h = false;
+	       return false;}
 	}
    return true;
  } 
