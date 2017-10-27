@@ -19,7 +19,7 @@ bool str(float *st,int n)
    return true;
  } 
  
- void sort (float* st, int n, int e) 
+void sort (float* st, int n, int e) 
  {
    for (unsigned int i=0; i<n; i++) 
 	{
@@ -31,8 +31,9 @@ bool str(float *st,int n)
 			 e=e+5;
 			}
 		}
-			if (e==0){cout << "An error has occured while input data";exit(0);
+			
 		}
+		if (e==0){cout << "There is nothing to swap"<<endl;
 	}
 	
 }
@@ -57,5 +58,12 @@ if(str(st, n))
 		print_st(st, n);
 		cin.get();
 		}
+	  else
+	{
+		cout << "An error has occured while reading numbers from line";
+		cin.get();
+	}
+	 delete st;
+        return 0;
 	}	
  
