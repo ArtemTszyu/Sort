@@ -33,7 +33,7 @@ void sort (float* st, int n, int e)
 		}
 			
 		}
-		if (e==0){cout << "There is nothing to swap"<<endl;
+		if (e==0){cout << "There is nothing to swap";exit (0);
 	}
 	
 }
