@@ -31,7 +31,7 @@ bool str(float *st,int n)
 			 e=e+5;
 			}
 		}
-			if (e==0){cout << "An error has occured while reading numbers from line";exit(0);
+			if (e==0){cout << "An error has occured while input data";exit(0);
 		}
 	}
 	
