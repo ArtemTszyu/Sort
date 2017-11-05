@@ -21,7 +21,7 @@ bool str(float *st,int n)
 }
 
 void sort (float* st, int n) {
-    for (unsigned int i = 0; i < n; i++) {
+   
         for (unsigned int i = 1; i < n; i++) {
             for (unsigned int j = i; j > 0 && st[j] < st[j - 1]; j--) {
                 swap(st[j], st[j - 1]);
@@ -30,7 +30,7 @@ void sort (float* st, int n) {
         }
     }
 
- }
+ 
     
     void print_st(float *st, unsigned int n) {
         for (unsigned int i = 0; i < n; i++) {
@@ -41,7 +41,10 @@ void sort (float* st, int n) {
     int main() {
 
         unsigned int n;
-        cin >> n;
+            if(!(cin >> n)) {
+        cout << "An error has occured while reading numbers from line";
+        return -1;
+    }
         cin.get();
         float *st = new float[n];
         if (str(st, n)) {
@@ -50,7 +53,7 @@ void sort (float* st, int n) {
         } else {
             cout << "An error has occured while reading numbers from line";
         }
-        delete st;
+        delete[] st;
         return 0;
     }
 
