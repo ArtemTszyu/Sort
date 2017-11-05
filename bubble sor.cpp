@@ -42,7 +42,10 @@ void sort (float* st, int n) {
     int main() {
 
         unsigned int n;
-        cin >> n;
+            if(!(cin >> n)) {
+        cout << "An error has occured while reading numbers from line";
+        return -1;
+    }
         cin.get();
         float *st = new float[n];
         if (str(st, n)) {
@@ -51,6 +54,6 @@ void sort (float* st, int n) {
         } else {
             cout << "An error has occured while reading numbers from line";
         }
-        delete st;
+        delete[] st;
         return 0;
     }
